@@ -1,0 +1,5 @@
+package org.fedelaper.spring.dao;
+
+public class PersonDAO {
+
+}

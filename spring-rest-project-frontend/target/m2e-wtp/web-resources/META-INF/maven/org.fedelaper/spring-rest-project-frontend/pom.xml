@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<parent>
+		<groupId>org.fedelaper</groupId>
+		<artifactId>spring-rest-project</artifactId>
+		<version>1.0-SNAPSHOT</version>
+		<relativePath>../pom.xml</relativePath>
+	</parent>
+
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>spring-rest-project-frontend</artifactId>
+	<packaging>war</packaging>
+	<name>Spring Rest Project Frontend</name>
+	<description>WebARchive containing the main Public HTML5 based view</description>
+
+	<build>
+		<plugins>
+			<!-- plugin for WAR packaging -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<configuration>
+					<webResources>
+						<resource>
+							<!-- this is relative to the pom.xml directory -->
+							<directory>src/main/webapp</directory>
+							<filtering>true</filtering>
+							<includes>
+								<include>**/web.xml</include>
+								<include>**/index.html</include>
+								<include>**/index.js</include>
+								<include>**/main.js</include>
+							</includes>
+						</resource>
+					</webResources>
+					<warName>spring-rest-project-frontend</warName>
+				</configuration>
+			</plugin>
+
+
+		</plugins>
+		<resources>
+			<!-- resource declaration for properties to be replaced in the xml descriptors -->
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+				<includes>
+					<include>**/project.properties</include>
+					<include>**/release.properties</include>
+				</includes>
+			</resource>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>false</filtering>
+				<excludes>
+					<exclude>**/project.properties</exclude>
+					<exclude>**/release.properties</exclude>
+				</excludes>
+			</resource>
+		</resources>
+
+	</build>
+
+	<dependencies>
+		<!-- font-awesome stylesheet dependencies -->
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>font-awesome</artifactId>
+			<version>${fontawesome.version}</version><!--$NO-MVN-MAN-VER$-->
+		</dependency>
+	</dependencies>
+</project>

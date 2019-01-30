@@ -1,0 +1,5 @@
+package org.fedelaper.spring.controller;
+
+public class PersonRestController {
+
+}
