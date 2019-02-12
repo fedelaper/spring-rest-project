@@ -16,6 +16,10 @@ public class PersonDAO {
 		persons.add(new Person(1, "John", "Doe", "djohn@gmail.com", "121-232-3435", "pass1"));
 		persons.add(new Person(2, "Russ", "Smith", "sruss@gmail.com", "343-545-2345", "pass2"));
 		persons.add(new Person(3, "Kate", "Williams", "kwilliams@gmail.com", "876-237-2987", "pass3"));
+		persons.add(new Person(4, "Pablo", "Folgar", "kwilliams@gmail.com", "876-237-2987", "pass3"));
+		persons.add(new Person(5, "Federico", "Lapertosa", "kwilliams@gmail.com", "876-237-2987", "pass3"));
+		persons.add(new Person(6, "Juan", "Osudar", "kwilliams@gmail.com", "876-237-2987", "pass3"));
+		persons.add(new Person(7, "Leandro", "Giordano", "kwilliams@gmail.com", "876-237-2987", "pass3"));
 	}
 
 	/**
